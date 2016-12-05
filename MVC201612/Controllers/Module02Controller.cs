@@ -1,0 +1,42 @@
+﻿using MVC201612.Models.Module02;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace MVC201612.Controllers
+{
+    public class Module02Controller : Controller
+    {
+
+        public ActionResult List()
+        {
+            var lst = new MVC201612.Models.Module02.PersonHelper().GetAllPeople();
+            return View(lst);
+        }
+
+        public ActionResult ListVM()
+        {
+            var lst = new MVC201612.Models.Module02.PersonHelper().GetAllPeopleAsViewModel();
+            return View(lst);
+        }
+
+        [HttpGet]
+        public ActionResult Edit()
+        {
+            var p = new MVC201612.Models.Module02.PersonHelper().GetPerson();
+            return View(p);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Person p)
+        {
+            if (ModelState.IsValid)
+                return RedirectToAction("EditOk");
+            else
+                return View();
+        }
+
+    }
+}
