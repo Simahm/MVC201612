@@ -95,7 +95,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Models\nothing.txt" />
+    <Content Include="Models\NothingHere.txt" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
