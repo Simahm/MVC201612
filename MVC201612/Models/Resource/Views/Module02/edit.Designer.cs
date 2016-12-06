@@ -61,7 +61,7 @@ namespace MVC201612.Models.Resource.Views.Module02 {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Country (from edit.resx).
+        ///   Looks up a localized string similar to Country (from edit.resx !!!!).
         /// </summary>
         public static string country {
             get {

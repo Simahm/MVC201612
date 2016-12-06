@@ -25,6 +25,9 @@ namespace MVC201612.Controllers
         [HttpGet]
         public ActionResult Edit()
         {
+            // test resource
+            var l = MVC201612.Models.Resource.Views.Module02.edit.country;
+
             var p = new MVC201612.Models.Module02.PersonHelper().GetPerson();
             return View(p);
         }

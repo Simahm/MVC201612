@@ -178,7 +178,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>28864</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:28864/</IISUrl>
+          <IISUrl>http://localhost:3000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
