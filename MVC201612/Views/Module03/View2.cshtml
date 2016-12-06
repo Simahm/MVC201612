@@ -16,7 +16,9 @@
     <ul id="lst"></ul>
     <script src="~/Scripts/jquery-3.1.1.js"></script>
     <script>
-        // NEJ --- ikke her (men vi skal til frokost)
+        // NEJ --- ikke her (men vi skal til frokost). 
+        // Bør ligge i en fil for sig selv
+
         $("#btn").click(function () {
             $.getJSON("/module03/json", {}, function (d) {
                 var ul = $("#lst");
@@ -24,7 +26,6 @@
                     var li = $("<li />").html(d[i].Name);
                     ul.append(li);
                 }
-
             });
         });
         

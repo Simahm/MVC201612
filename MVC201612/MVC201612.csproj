@@ -127,6 +127,7 @@
     <Compile Include="Models\Module02\Person.cs" />
     <Compile Include="Models\Module02\PersonHelper.cs" />
     <Compile Include="Models\Module02\PersonViewModel.cs" />
+    <Compile Include="Models\Module03\User.cs" />
     <Compile Include="Models\Resource\Views\Module02\edit.da.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +147,8 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Views\Module03\View2.cshtml" />
     <Content Include="Views\Module03\TestView.cshtml" />
+    <Content Include="Views\Module03\View7.cshtml" />
+    <Content Include="Views\Module03\GetUser2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
