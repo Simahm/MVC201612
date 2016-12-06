@@ -149,6 +149,7 @@
     <Content Include="Views\Module03\TestView.cshtml" />
     <Content Include="Views\Module03\View7.cshtml" />
     <Content Include="Views\Module03\GetUser2.cshtml" />
+    <Content Include="Views\Module03\Cache.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

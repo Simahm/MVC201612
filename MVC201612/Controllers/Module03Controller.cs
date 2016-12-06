@@ -118,6 +118,36 @@ namespace MVC201612.Controllers
             return View();
 
         }
+
+        [HttpGet]
+        [ActionName("Attr1")]
+        public ActionResult Attr1_Get()
+        {
+            return View();
+
+        }
+
+        [HttpPost]
+        [ActionName("Attr1")]
+        public ActionResult Attr1_Post(int id)
+        {
+            return View();
+
+        }
+
+        [NonAction]
+        public int TestMethod()
+        {
+            return 9;
+        }
+
+
+        [OutputCache(Duration = 5)]
+        public ActionResult Cache()
+        {
+            ViewBag.kl = DateTime.Now.ToLongTimeString();
+            return View();
+        }
     }
 
     // Skal ikke ligge her med mangler kage.. (skal ligge i /models)
