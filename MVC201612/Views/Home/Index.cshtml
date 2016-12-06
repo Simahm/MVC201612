@@ -16,7 +16,7 @@
         <ul>
             @foreach (var a in item.Value)
             {
-                <li>@Html.ActionLink(a.ActionName, a.ActionName, a.ControllerName)</li>
+                <li>@Html.ActionLink(a.Attributes!=""?"[" + a.Attributes + "] " + a.ReturnType + " " + a.ActionName : a.ReturnType + " " + a.ActionName, a.ActionName, a.ControllerName)</li>
             }
         </ul>
     }
