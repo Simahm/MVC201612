@@ -150,6 +150,8 @@
     <Content Include="Views\Module03\View7.cshtml" />
     <Content Include="Views\Module03\GetUser2.cshtml" />
     <Content Include="Views\Module03\Cache.cshtml" />
+    <Content Include="Views\Module03\Child.cshtml" />
+    <Content Include="Views\Module03\Klokken.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

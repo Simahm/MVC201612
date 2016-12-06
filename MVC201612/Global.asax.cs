@@ -13,6 +13,7 @@ namespace MVC201612
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            // GLOBALE FILTRE...
         }
     }
 }

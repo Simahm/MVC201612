@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace MVC201612.Controllers
 {
+
     public class Module03Controller : Controller
     {
         public ActionResult Index()
@@ -113,7 +114,7 @@ namespace MVC201612.Controllers
 
         }
 
-        public ActionResult GetUser3([Bind(Exclude ="IsAdmin")]User u)
+        public ActionResult GetUser3([Bind(Exclude = "IsAdmin")]User u)
         {
             return View();
 
@@ -148,10 +149,33 @@ namespace MVC201612.Controllers
             ViewBag.kl = DateTime.Now.ToLongTimeString();
             return View();
         }
+
+        public ActionResult Child()
+        {
+            return View();
+        }
+
+
+        [ChildActionOnly]
+        public ActionResult Klokken()
+        {
+            // logik
+            if (DateTime.Now.Millisecond % 2 == 0)
+            {
+                ViewBag.kl = DateTime.Now.ToLongTimeString();
+            }
+            else
+            {
+                ViewBag.kl = DateTime.Now.ToShortTimeString();
+            }
+
+            return PartialView();
+        }
     }
 
     // Skal ikke ligge her med mangler kage.. (skal ligge i /models)
-    class PersonFakturaViewModel {  // Hedder også DTO'er PersonFakturaDTO
+    class PersonFakturaViewModel
+    {  // Hedder også DTO'er PersonFakturaDTO
         public List<Person> Personer { get; set; }
         public string Faktura { get; set; }
         // + diverse
