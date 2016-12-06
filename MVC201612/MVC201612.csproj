@@ -118,11 +118,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Module02Controller.cs" />
     <Compile Include="Controllers\Module03Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Misc\ControllerActionViewModel.cs" />
     <Compile Include="Models\Module02\Body\Person.cs" />
     <Compile Include="Models\Module02\Person.cs" />
     <Compile Include="Models\Module02\PersonHelper.cs" />
@@ -152,6 +154,7 @@
     <Content Include="Views\Module03\Cache.cshtml" />
     <Content Include="Views\Module03\Child.cshtml" />
     <Content Include="Views\Module03\Klokken.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

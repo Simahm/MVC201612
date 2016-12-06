@@ -1,0 +1,21 @@
+﻿@model Dictionary<string, List<MVC201612.Models.Misc.ControllerActionViewModel>>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>MVC Kursus</h1>
+    <hr />
+
+    @foreach (var item in Model)
+    {        
+        <h2>@item.Key</h2>
+        foreach (var a in item.Value) {
+            <h3>@a.ActionName</h3>
+        }
+    }
+</body>
+</html>
