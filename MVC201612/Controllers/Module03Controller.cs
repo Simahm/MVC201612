@@ -113,6 +113,11 @@ namespace MVC201612.Controllers
 
         }
 
+        public ActionResult GetUser3([Bind(Exclude ="IsAdmin")]User u)
+        {
+            return View();
+
+        }
     }
 
     // Skal ikke ligge her med mangler kage.. (skal ligge i /models)
