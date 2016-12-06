@@ -19,7 +19,7 @@ namespace MVC201612.Controllers
                     .Where(type => typeof(System.Web.Mvc.Controller).IsAssignableFrom(type))
                     .SelectMany(type => type.GetMethods(BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public))
                     .Where(m => !m.GetCustomAttributes(typeof(System.Runtime.CompilerServices.CompilerGeneratedAttribute), true).Any())
-                    .Select(x => new ControllerActionViewModel { ControllerName = x.DeclaringType.Name, ActionName = x.Name, ReturnType = x.ReturnType.Name, Attributes = String.Join(",", x.GetCustomAttributes().Select(a => a.GetType().Name.Replace("Attribute", ""))) })
+                    .Select(x => new ControllerActionViewModel { ControllerName = x.DeclaringType.Name.Replace("Controller",""), ActionName = x.Name, ReturnType = x.ReturnType.Name, Attributes = String.Join(",", x.GetCustomAttributes().Select(a => a.GetType().Name.Replace("Attribute", ""))) })
                     .OrderBy(x => x.ControllerName).ThenBy(x => x.ActionName).ToList();
             var grp = controlleractionlist.GroupBy(i => i.ControllerName).ToDictionary(i => i.Key, i=>i.ToList());
             return View(grp);

@@ -11,11 +11,14 @@
     <hr />
 
     @foreach (var item in Model)
-    {        
+    {
         <h2>@item.Key</h2>
-        foreach (var a in item.Value) {
-            <h3>@a.ActionName</h3>
-        }
+        <ul>
+            @foreach (var a in item.Value)
+            {
+                <li>@Html.ActionLink(a.ActionName, a.ActionName, a.ControllerName)</li>
+            }
+        </ul>
     }
 </body>
 </html>
