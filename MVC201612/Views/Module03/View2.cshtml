@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View2</title>
+</head>
+<body>
+    <h1>View 2</h1>
+    <input type="button" value="Klik" id="btn" />
+    <ul id="lst"></ul>
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script>
+        // NEJ --- ikke her (men vi skal til frokost)
+        $("#btn").click(function () {
+            $.getJSON("/module03/json", {}, function (d) {
+                var ul = $("#lst");
+                for (var i = 0; i < d.length; i++) {
+                    var li = $("<li />").html(d[i].Name);
+                    ul.append(li);
+                }
+
+            });
+        });
+        
+
+
+    </script>
+</body>
+</html>
