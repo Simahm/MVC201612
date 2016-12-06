@@ -9,7 +9,7 @@ namespace MVC201612.Controllers
 {
     public class Module02Controller : Controller
     {
-
+        // /Module02/List
         public ActionResult List()
         {
             var lst = new MVC201612.Models.Module02.PersonHelper().GetAllPeople();
