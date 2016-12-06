@@ -17,9 +17,9 @@ namespace MVC201612.Models.Module02
 
     public class PersonMeta
     {
-        [StringLength(15, MinimumLength = 2, ErrorMessage = "Wrong city")]
-        [Display(Name = "The country")]
-        public string Country { get; set; }
+        //[StringLength(15, MinimumLength = 2, ErrorMessage = "Wrong city")]
+        //[Display(Name = "The country")]
+        //public string Country { get; set; }
 
     }
 }

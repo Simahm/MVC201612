@@ -14,7 +14,10 @@ namespace MVC201612.Models.Module02
         [Display(Name = "Persons name")]
         public string Name { get; set; }
 
+        // Hmmm... virker ikke lige pt
+        [Display(Name= "country", ResourceType = typeof(MVC201612.Models.Resource.Views.Module02.edit))]
         public string Country { get; set; }
+
         public string City { get; set; }
 
         [Range(60, 250, ErrorMessage = "Wrong...")]
